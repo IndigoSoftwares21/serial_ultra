@@ -12,8 +12,6 @@ void setup() {
   pinMode(echoPin, INPUT);
   Serial.begin(9600);
 }
-
-
 void loop() {
   // put your main code here, to run repeatedly:
   digitalWrite(trigPin, LOW);
@@ -27,14 +25,6 @@ void loop() {
   {
     Serial.println("DESKTOP");
     intruder = true;
-    delay(300);
+    delay(300); // You can try reducing this delay time to make the code respond faster
   }
-  else if(distance>50 && intruder == true){
-      Serial.println("APP");
-      intruder = false;
-      delay(300);
-  }
-  
-  // Serial.print("Distance: ");
-  // Serial.println(distance);
 }
